@@ -2,7 +2,6 @@ import os
 from dotenv import load_dotenv
 from graphs.build_graph import load_data, build_graph
 from rag.generate_outfit import get_outfit_recommendation
-import openai
 
 load_dotenv()
 

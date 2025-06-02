@@ -31,12 +31,22 @@ Each category should have a minimum of one option selected.
         return ast.literal_eval(response.choices[0].message.content.strip())
     except:
         return {"occasion": None, "style": None, "warmth_level": None}
+    
 
 def find_seed_node(G, tags):
+    best_score = -1
+    best_node = None
+
     for n, d in G.nodes(data=True):
-        if all(tags[k] == d.get(k) for k in tags if tags[k]):
-            return n
-    return next(iter(G.nodes))  # fallback
+        score = sum(
+            1 for k in tags if tags[k] and tags[k] == d.get(k)
+        )
+        if score > best_score:
+            best_score = score
+            best_node = n
+
+    return best_node if best_node is not None else next(iter(G.nodes))
+
 
 def get_outfit_recommendation(G, query):
     # Step 1: Extract tags from the query
@@ -80,7 +90,7 @@ Guidelines:
 - Be concise and explain the outfit's vibe.
 """
 
-    print(f"\n📦 Prompt Sent to GPT:\n{prompt}\n")
+    print(f"\nPrompt sent to LLM:\n{prompt}\n")
 
     response = client.chat.completions.create(
         model="gpt-4",
