@@ -5,7 +5,6 @@ from rag.generate_outfit import get_outfit_recommendation
 import openai
 
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
 if __name__ == "__main__":
     df = load_data("data/clothing_items.csv")
