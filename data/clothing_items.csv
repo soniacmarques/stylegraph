@@ -1,7 +1,21 @@
-id,name,type,color,fabric,weather,occasion,style
-1,White T-shirt,top,white,cotton,warm,casual,minimalist
-2,Black Jeans,bottom,black,denim,cool,casual,minimalist
-3,Leather Jacket,layer,black,leather,cool,casual,edgy
-4,Red Skirt,bottom,red,cotton,warm,party,boho
-5,Sneakers,shoes,white,rubber,any,casual,sporty
-6,Blazer,layer,navy,wool,cool,business,classic
+id,name,type,color,fabric,warmth_level,occasion,style
+1,White T-shirt,top,white,cotton,light,casual,minimalist
+2,Black Jeans,bottom,black,denim,medium,casual,minimalist
+3,Leather Jacket,layer,black,leather,warm,casual,edgy
+4,Grey Skirt,bottom,grey,cotton,light,party,boho
+5,Sneakers,shoes,black and white,rubber,light,casual,sporty
+6,Blazer,layer,black,wool,medium,business,classic
+7,Pink Knit Top,top,pink,knit,medium,casual,girly
+8,Black Mini Skirt,bottom,black,denim,light,casual,girly
+9,Pastel Cardigan,layer,lavender,knit,medium,casual,cozy
+10,Black Boots,shoes,black,leather,medium,casual,minimalist
+11,Lilac Converse,shoes,lilac,canvas,light,casual,girly
+12,Beige Sweatpants,bottom,beige,cotton,medium,casual,minimalist
+13,Grey Knit Sweatpants,bottom,grey,knit,warm,casual,cozy
+14,Baby Blue Tank Top,top,baby blue,cotton,light,casual,girly
+15,Lavender Long Sleeve Tee,top,lavender,cotton,medium,casual,girly
+16,Cream Hoodie,layer,cream,fleece,warm,casual,cozy
+17,Mint Cropped Sweater,top,mint,knit,medium,casual,cozy
+18,Gold Hoop Earrings,accessory,gold,metal,light,casual,girly
+19,Black Crossbody Bag,accessory,black,leather,light,casual,minimalist
+20,Delicate Gold Necklace,accessory,gold,metal,light,casual,girly

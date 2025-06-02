@@ -1,12 +1,10 @@
 from openai import OpenAI
-
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 import networkx as nx
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
-
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def get_outfit_recommendation(G, query, num_items=3):
     # TODO: Filter compatible nodes
@@ -18,6 +16,8 @@ def get_outfit_recommendation(G, query, num_items=3):
     ])
 
     prompt = f"""You are a personal stylist. Based on the following clothing items:\n{item_descriptions}\nSuggest a stylish outfit for the prompt: '{query}'."""
+
+    print(f"Prompt: {prompt}")
 
     response = client.chat.completions.create(model="gpt-4",
     messages=[{"role": "user", "content": prompt}])
