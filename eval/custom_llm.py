@@ -12,7 +12,7 @@ import os
 
 login(token=os.environ.get("HUGGINGFACE_TOKEN"))
 
-class CustomMistral7B(DeepEvalBaseLLM):
+class CustomLlama(DeepEvalBaseLLM):
     def __init__(self):
         model_id = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
         device = "mps" if torch.backends.mps.is_available() else "cpu"
