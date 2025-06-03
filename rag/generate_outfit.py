@@ -97,4 +97,4 @@ Guidelines:
         messages=[{"role": "user", "content": prompt}]
     )
 
-    return response.choices[0].message.content
+    return item_descriptions, response.choices[0].message.content
