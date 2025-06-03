@@ -16,9 +16,7 @@ def evaluate_outfit_response(query, context, llm_output):
 
     custom_llm = CustomLlama()
 
-    faithfulness = FaithfulnessMetric(model=custom_llm).measure(test_case)
     relevance = AnswerRelevancyMetric(model=custom_llm).measure(test_case)
 
     print("\n🧪 DeepEval Results:")
-    print(f"• Faithfulness: {faithfulness.score:.2f}")
-    print(f"• Relevance:   {relevance.score:.2f}")
+    print(f"• Relevance:   {relevance:.2f}")
